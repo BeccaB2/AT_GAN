@@ -47,8 +47,23 @@ from tensorflow.keras import constraints
 from keras.utils.generic_utils import func_dump
 from keras.utils.generic_utils import func_load
 from keras.utils.generic_utils import deserialize_keras_object
-from keras.utlis.generic_utils import has_arg
+from keras.utils.generic_utils import has_arg
 
 from keras.utils import conv_utils
 
-print(os.listdir("../Input"))
+print(os.listdir("D:\AT_GAN\input"))
+
+tf.enable_eager_execution()
+
+image_width = 64
+image_height = 64
+image_channels = 3
+image_sample_size = 10000
+
+image_output_dir = 'D:\AT_GAN\output_images'
+image_input_dir = 'D:\AT_GAN\input\images\Images'
+image_ann_dir = "D:\AT_GAN\input\Annotation"
+
+OUT_DIR = Path('D:\AT_GAN\output_images')
+MODEL_PATH = 'D:\AT_GAN\input\classify_image_graph_def.pb'
+TRAIN_DIR = Path('D:\AT_GAN\input\images\Images')
